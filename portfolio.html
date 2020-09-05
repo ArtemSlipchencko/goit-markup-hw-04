@@ -13,7 +13,7 @@
 
   <body>
     <header>
-      <div class="container header">
+      <div class="header">
        <nav class="nav">
         <a href="./index.html">
           <img src="./images/logotype.svg" alt="Логотип студии" class="logo"/>
@@ -44,6 +44,7 @@
     <main>
       <h1 class="visually-hidden">Портфолио</h1>
       <section class="filters">
+        <div class="filters-container">
         <h2 class="visually-hidden">Фильтры</h2>
         <ul class="filter-btns">
           <li class="filter-btn-box"><button class="filter-btn" type="button">Все</button></li>
@@ -52,9 +53,11 @@
           <li class="filter-btn-box"><button class="filter-btn" type="button">Дизайн</button></li>
           <li class="filter-btn-box"><button class="filter-btn" type="button">Маркетинг</button></li>
         </ul>
+      </div>
       </section>
-      <section class="container gallery">
+      <section class="gallery">
         <h2 class="visually-hidden">Галерея</h2>
+        <div class="gallery-container">
         <ul class="gallery-boxes">
           <li class="gallery-box">
             <a href="">
@@ -108,8 +111,7 @@
             <a href="">
               <img src="./images/lab.jpg" alt="бирка" width="370" /> <div class="gallery-text-box">
               <h3>Проект LAB</h3>
-              <p class="gallery-type">Маркетинг</p></a
-            ></div>
+              <p class="gallery-type">Маркетинг</p></a>
           </li>
           <li class="gallery-box">
             <a href="">
@@ -119,11 +121,12 @@
                 width="370"
               /> <div class="gallery-text-box">
               <h3>Growing Business</h3>
-              <p class="gallery-type">Приложение</p></a
-            ></div>
+              <p class="gallery-type">Приложение</p></a>
+            
 
           </li>
         </ul>
+      </div>
       </section>
     </main>
 

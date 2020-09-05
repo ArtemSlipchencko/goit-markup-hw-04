@@ -6,13 +6,23 @@
     --button-background: #f5f4fa;
   }
 
-  
+  * {
+    box-sizing: border-box;
+  }
+
   a {
     text-decoration: none;
   }
   
   .visually-hidden {
     margin: 0;
+    position: absolute !important;
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0 !important;
+    border: 0 !important;
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden;
   }
 
   body {
@@ -22,13 +32,6 @@
   
   ul {
     list-style: none;
-  }
-  
-  .container {
-    width: 1200px;
-    margin-top: 0px;
-    margin-left: auto;
-    margin-right: auto;
   }
 
   h2 {
@@ -53,15 +56,13 @@
 
 /* header */
 
-
-
 .logo {
   margin-right: 93px;
 }
 
 .nav {
   display: flex;
-  margin-right: 331px;
+  margin-right: auto;
 }
 
 .navigation {
@@ -77,13 +78,24 @@
 }
 
 .header {
-    padding: 32px 215px;
+    padding: 24px 15px;
     width: 1200px;
     display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  header::after {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 100%;
+    background-color: #ECECEC;
   }
 
   .links-nav {
-    padding: 32px 0px;
+    padding: 24px 0;
     color: var(--secondary-text-color);
     font-style: normal;
     font-weight: 500;
@@ -102,8 +114,8 @@
   }
 
   .links-contact {
+    padding: 24px 0;
     color: var(--main-text-color);
-    padding: 32px 0px;
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
@@ -132,10 +144,6 @@
 }
 /* footer */
 
-.footer-box {
-
-}
-
 .footer-contacts {
   margin: 0;
   padding: 0;
@@ -146,14 +154,23 @@
 }
 
 .footer {
-    width: 1200px;
-    padding: 60px 215px 60px 215px;
-    margin-right: auto;
-    margin-left: auto;
+    padding: 60px 0;
+    background-color: #2f303a;
   }
   
   .footer-logo {
     margin-bottom: 20px;
+  }
+
+  .footer-boxes {
+    padding: 0 15px;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .footer-contact {
+    color: #ffffff;
   }
 
   .contacts {
@@ -182,22 +199,29 @@ h1 {
     text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
+    color: #ffffff;
   }
 
 .hero {
-    padding: 200px 452px 280px 452px;
     margin-top: 0px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 696px;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #2f303a;
   }
-  
-.btn-container {
-  display: flex;
-  justify-content: center;
-}
+
+  .hero-box {
+    max-width: 696px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 
   .btn {
+    min-width: 200px;
+    margin-left: auto;
+    margin-right: auto;
     color: var(--additional-text-color);
     background-color: var(--accent-color);
     margin-top: 30px;
@@ -216,20 +240,31 @@ h1 {
 /* qualities */
 
 .qualities-boxes {
-  margin: 0;
   padding: 0;
-  min-width: 1200px;
+  margin: 0;
   display: flex;
-  justify-content: space-between;
 }
 
 .qualities-box {
-  width: 270px;
+  max-width: 270px;
 }
 
+.qualities-box:not(:last-child) {
+  margin-right: 30px;
+}
+
+.qualities-container {
+  padding: 0 15px;
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+}
+
+
 .qualities {
-    padding: 120px 215px 94px 215px;
-    width: 1200px;
+    padding: 94px 0px;
+    width: 100%;
     margin-top: 0px;
     margin-left: auto;
     margin-right: auto;
@@ -263,20 +298,25 @@ h1 {
 
 /* jobs */
 
-.jobs-boxes {
-  margin: 0;
-  padding: 0;
+.jobs-box:not(:nth-child(3n)) {
+  margin-right: auto;
+}
+
+.jobs-container {
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
   width: 1200px;
+}
+
+.jobs-boxes {
+  padding: 0;
+  margin: 0;
   display: flex;
-  justify-content: space-around;
 }
 
 .jobs {
-    margin-top: 0px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 94px 215px 98px 215px;
-    width: 1200px;
+    padding-bottom: 94px;
   }
 
 /* team */
@@ -284,7 +324,7 @@ h1 {
 
 .team-boxes {
   margin: 0;
-  padding: 0;
+  padding: 0px 215px;
   display: flex;
   justify-content: space-around;
 }
@@ -295,13 +335,21 @@ h1 {
   justify-content: center;
 }
 
+.team-box:not(:last-child) {
+  margin-right: 23px;
+}
+
 .team {
-    margin-left: auto;
-    margin-right: auto;
-    padding: 94px 215px 94px 215px;
-    width: 1200px;
+    padding: 94px 0px;
   }
   
+.team-container {
+  padding: 0 15px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+}
+
   .dev {
     text-align: center;
     margin: 0;
@@ -334,12 +382,21 @@ h1 {
 
   /* portfolio */
 
+ul {
+  list-style: none;
+}
+
 .filter-btns {
-  min-width: 554px;
-  padding: 0;
   margin: 0;
+  padding: 0;
   display: flex;
   justify-content: center;
+}
+
+.filters-container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 
 .filter-btn-box:not(:first-child) {
@@ -348,18 +405,23 @@ h1 {
 
 .filter-btn {
   border-radius: 4px;
+  padding: 6px 22px;
 }
 
 .filters {
-    padding: 100px 215px 50px 215px;
+    padding-top: 94px;
+    padding-bottom: 34px;
     min-width: 1200px;
 }
 
-.gallery {
+.gallery-container {
     width: 1200px;
-    padding: 50px 215px 94px 215px;
-    display: flex;
-    flex-direction: column;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.gallery {
+  padding-bottom: 94px;
 }
 
   .gallery-type {
@@ -379,9 +441,13 @@ h3 {
 
 .gallery-boxes {
   margin: 0;
+  padding: 0;
   display: flex;
   flex-wrap: wrap;
-  padding: 0px 15px;
+}
+
+.gallery-box {
+  width: 370px;
 }
 
 .gallery-box:not(:nth-last-child(-n + 3)) {
@@ -400,7 +466,6 @@ h3 {
 img {
   display: block;
 }
-
 
   button {
     background-color: var(--button-background);
